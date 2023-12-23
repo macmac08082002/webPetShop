@@ -1,0 +1,177 @@
+@use '../../../scss/' as *;
+
+.header{
+    background-color: white;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+   
+    
+    }
+    &__logo {
+        font-family: 'Squada One', cursive;
+        letter-spacing: -0.012em;
+        height: 60%;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover{
+            color: $yellow-color;
+        }
+    }
+   .logo{
+    height: 75%;
+   }
+    &__feature {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+        svg {
+            path {
+                stroke: black;
+            }
+            &:hover {
+                path {
+                    stroke: #F3BA00;
+                }
+            }
+        }
+        &-cart {
+            position: relative;
+            cursor: pointer;
+
+            .quantity-cart-items{
+                position: absolute;
+                top: -14px;
+                right: -18px;
+                background-color: $yellow-color;
+                
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                text-align: center;
+                color: $white-color;
+            }
+        }
+
+        &-login{
+            a{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+                letter-spacing: -0.012em;
+                color: $black-color;
+                text-decoration: none;
+                
+                &:hover{
+                    color: $yellow-color;
+                }
+            }
+
+            span{
+                color: $black-color;
+                margin: 0 4px;
+            }
+        }
+
+        &-user{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 20px;
+            color: $white-color;
+            position: relative;
+
+            .header__user-dropdown{
+                display: none;
+                position: absolute;
+                top: 36px;
+                right: 0;
+                background-color: $white-color;
+                min-width: 196px;
+                border-radius: 10px;
+                
+                z-index: 2; 
+
+                ul{
+                    padding: 0;
+                    margin: 15px 0;
+
+                    li{
+                        list-style: none;
+                        margin: 10px 10px;
+
+                        &:nth-child(2){
+                            margin: 10px 10px;
+                        }
+
+                        &:hover{
+                            background-color: $yellow-color;
+                            border-radius: 5px;
+                        }
+                        
+                        a{
+                            width: 100%;
+                            display: block;
+                            text-decoration: none;
+                            font-family: 'ABeeZee', sans-serif;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $black-color;
+                            padding: 10px 10px;
+                        }
+                    }
+                }
+            }
+
+
+            &::after{
+                position: absolute;
+                content: ""; 
+                top: 16px;
+                left: -2px;
+                width: 40px;
+                height: 40px;
+                background-color: transparent;
+            }
+
+            &:hover{
+                color: $yellow-color;
+                cursor: pointer;
+            }
+            
+            &:hover>.header__user-dropdown{
+                display: block !important;
+            }
+        }
+    }
+    
+}
+
+.searchbox{
+    display: flex;
+    white-space: nowrap;
+}
+
+.inputsearch {
+   
+    border: 1px solid #333;
+    height: 2.6rem;
+    width: 17rem;
+    padding-left: 1rem;
+}
+
+.buttonsearch{
+   
+    height: 2.5rem;
+    width: 7rem;
+    border: none;
+    background-color: #6C79B5;
+    margin-left: 1px;
+}
+.buttonsearch:hover{
+    background-color: #98a6e7;
+}
